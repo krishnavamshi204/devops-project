@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
         run: docker build -t devops-app .
 
       - name: Run Container
-        run: docker run -d -p 3000:3000 devops-app
+        run: docker run -d -p 3001:3000 devops-app
